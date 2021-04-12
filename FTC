@@ -6,6 +6,8 @@ raspivid -t 0
 
 python3 camera_display.py 
 
+https://github.com/hfor62/FTC.git
+
 sudo /opt/vc/bin/tvservice -o
 
 
