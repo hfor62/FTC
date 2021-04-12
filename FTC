@@ -1,0 +1,7 @@
+ffmpeg -f v4l2 -input_format h264 -video_size 640x480 -framerate 20 -i /dev/video0 -vcodec copy -f segment -segment_time 10 -reset_timestamps 1 output_%03d.mp4
+
+
+sudo /opt/vc/bin/tvservice -o
+
+
+ifconfig wlan0 down
