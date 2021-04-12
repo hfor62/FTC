@@ -1,7 +1,14 @@
-ffmpeg -f v4l2 -input_format h264 -video_size 640x480 -framerate 20 -i /dev/video0 -vcodec copy -f segment -segment_time 10 -reset_timestamps 1 output_%03d.mp4
+ffmpeg -f v4l2 -input_format h264 -video_size 640x480 -framerate 20 -i /dev/video0 -vcodec copy -f segment -segment_time 3600 -reset_timestamps 1 output_%03d.mp4
 
+ffplay
+
+raspivid -t 0
+
+python3 camera_display.py 
 
 sudo /opt/vc/bin/tvservice -o
 
 
 ifconfig wlan0 down
+
+ | ffplay -
